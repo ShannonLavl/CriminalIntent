@@ -18,6 +18,11 @@ public class Crime {
         mDate = new Date();
     }
 
+    @Override
+    public String toString() {
+        return mTitle;
+    }
+
     public UUID getId() {
         return mId;
     }
@@ -35,7 +40,7 @@ public class Crime {
     }
 
     public void setDate(Date date) {
-        this.mDate = mDate;
+        this.mDate = date;
     }
 
     public boolean isSolved() {
@@ -43,6 +48,6 @@ public class Crime {
     }
 
     public void setSolved(boolean solved) {
-        this.mSolved = mSolved;
+        this.mSolved = solved;
     }
 }
