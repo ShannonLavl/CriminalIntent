@@ -8,7 +8,7 @@ import java.util.UUID;
  */
 public class Crime {
     private UUID mId;
-    private String mTitle;
+    private String mTitle = "New Crime";
     private Date mDate;
     private boolean mSolved;
 
