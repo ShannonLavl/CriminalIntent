@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.NavUtils;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -50,10 +49,10 @@ public class CrimeFragment extends Fragment {
     }
 
     public void updateDate() {
-        mDateButton.setText(DateFormat.format("MMMM d, yyyy", mCrime.getDate()));
+        mDateButton.setText(mCrime.getDateString());
     }
     public void updateTime() {
-        mTimeButton.setText(DateFormat.format("hh:mm a", mCrime.getDate()));
+        mTimeButton.setText(mCrime.getTimeString());
     }
 
     @Override

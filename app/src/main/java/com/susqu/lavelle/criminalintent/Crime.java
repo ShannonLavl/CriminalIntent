@@ -1,5 +1,7 @@
 package com.susqu.lavelle.criminalintent;
 
+import android.text.format.DateFormat;
+
 import java.util.Date;
 import java.util.UUID;
 
@@ -37,6 +39,14 @@ public class Crime {
 
     public Date getDate() {
         return mDate;
+    }
+
+    public String getDateString() {
+        return (String) DateFormat.format("MMMM d, yyyy", mDate);
+    }
+
+    public String getTimeString() {
+        return (String) DateFormat.format("hh:mm a", mDate);
     }
 
     public void setDate(Date date) {
