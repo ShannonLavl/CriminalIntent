@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.susqu.lavelle.criminalintent" >
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -20,6 +23,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".CrimeListActivity"/>
         </activity>
+        <activity android:name=".CrimeCameraActivity"
+            android:screenOrientation="landscape"
+            android:label="@string/app_name" >
+       </activity>
     </application>
 
 </manifest>
